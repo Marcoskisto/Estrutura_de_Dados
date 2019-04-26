@@ -3,6 +3,12 @@ typedef struct celula{
     struct celula *prox;
 }cel;
 
+typedef struct celulaDupla{
+    struct celulaDupla *ant;
+    int valor;
+    struct celulaDupla *prox;
+}cel2;
+
 cel * novaCelula(int valorX){
     cel *nova;
     nova = malloc(sizeof(cel));
@@ -10,6 +16,7 @@ cel * novaCelula(int valorX){
     nova->prox=NULL;
     return nova;
 }
+
 void insereNaLista_Cabeca(cel *lst, cel *nova){
     nova->prox=lst->prox;
     lst->prox=nova;
