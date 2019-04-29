@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1556541264 source:c:\users\andre\documents\github\estrutura_de_dados\insercao\main.c
+	<stdio.h>
+	<stdlib.h>
+	"vetores.h"
+	"listaEncadeada.h"
+
+1556306603 c:\users\andre\documents\github\estrutura_de_dados\insercao\vetores.h
+
+1556541228 c:\users\andre\documents\github\estrutura_de_dados\insercao\listaencadeada.h
+

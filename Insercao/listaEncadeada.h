@@ -33,3 +33,13 @@ void printListaSemCabeca(cel *lst){
         lst=lst->prox;
     }
 }
+cel* vetorToListaCabeca(int v[], int n){
+    int i;
+    cel *lst;
+    lst=novaCelula(n);
+    lst->valor=-111;
+    for(i=n-1;i>=0;i--){
+        insereNaLista_Cabeca(lst,v[i]);
+    }
+
+}
