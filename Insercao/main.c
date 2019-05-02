@@ -2,41 +2,16 @@
 #include <stdlib.h>
 #include "vetores.h"
 #include "listaEncadeada.h"
-void ordenacaoInsercaoEncadeada(cel *lst){
-    cel *ultimo=lst->prox;
-    cel *atual;
-    cel *anterior;
-    cel *aux;
-
-    while(ultimo!=NULL){
-        atual=lst->prox;
-        anterior=lst;
-            while(atual!=ultimo){
-                if(atual->valor>ultimo->prox){
-                    anterior->prox=ultimo;
-                    aux=ultimo->prox;
-                    ultimo->prox=atual;
-                    atual->prox=aux;
-
-                    ultimo=atual;
-                }else{
-                    atual=atual->prox;
-                    anterior=anterior->prox;
-                }
-            }
-            ultimo=ultimo->prox;
-        }
-}
-
+#include "ordenacao.h"
 
 int main()
 {
     typedef struct celula cel;
-    typedef struct celulaDupla cel2;
     int v[]={7,4,3,5,10,100,1};
+    int v2[]={4,3,2,1,10,8,7,20,30,100,200,0};
     printVetorInt(v,7);
     printf("\n");
-    ordenacaoInsercao(v,7);
+    ordenacaoInsercao_Vetor(v,7);
     printVetorInt(v,7);
     printf("\n\n\n");
     cel *lst=novaCelula(-1);
@@ -51,10 +26,11 @@ int main()
     printf("\n");
     printListaSemCabeca(lst);
     printf("\nInsercao encadeada: ");
-    lst = vetorToListaCabeca(v,7);
+    lst = vetorToListaCabeca(v2,12);
     printListaSemCabeca(lst);
-
-
+    ordenacaoInsercao_ListaEncadeada(lst);
+    printf("\n");
+    printListaSemCabeca(lst);
     //ordenacaoInsercaoEncadeada(lst);
     //printListaSemCabeca(lst);
     return 0;
