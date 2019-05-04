@@ -9,6 +9,7 @@ int main()
     typedef struct celula cel;
     int v[]={7,4,3,5,10,100,1};
     int v2[]={4,3,2,1,10,8,7,20,30,100,200,0};
+    int v3[]={4,3,2,1,10,8,7,20,30,100,200,0};
     printVetorInt(v,7);
     printf("\n");
     ordenacaoInsercao_Vetor(v,7);
@@ -33,5 +34,10 @@ int main()
     printListaSemCabeca(lst);
     //ordenacaoInsercaoEncadeada(lst);
     //printListaSemCabeca(lst);
+    printf("\n\nVetor desordenado: ");
+    printVetorInt(v3,12);
+    ordenacaoSelecao_Vetor(v3,12);
+    printf("\n");
+    printVetorInt(v3,12);
     return 0;
 }

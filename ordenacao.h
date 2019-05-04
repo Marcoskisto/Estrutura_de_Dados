@@ -14,6 +14,19 @@ void ordenacaoInsercao_Vetor(int v[], int n){
         v[j+1]=x;
     }
 }
+
+void ordenacaoSelecao_Vetor(int v[], int n){
+    int i, j, menor, aux;
+    for(i=0;i<n-1;i++){
+        menor=i;
+        for(j=i+1;j<n;j++){
+            if(v[j]<v[menor]) menor=j;
+        }
+        aux=v[i];
+        v[i]=v[menor];
+        v[menor]=aux;
+    }
+}
 void ordenacaoInsercao_ListaEncadeada(cel *lst){
     cel *ultimo=lst->prox;
     cel *ultimoAnterior=lst;
@@ -36,4 +49,9 @@ void ordenacaoInsercao_ListaEncadeada(cel *lst){
             ultimoAnterior=ultimo;
             ultimo=ultimo->prox;
         }
+}
+
+void ordenacaoSelecao_ListaEncadeada(cel *lst){
+
+
 }
