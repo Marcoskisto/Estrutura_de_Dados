@@ -50,11 +50,12 @@ void ordenacaoSelecao_Vetor(int v[], int n){
         v[menor]=aux;
     }
 }
-void ordenacaoSelecao_ListaEncadeada(cel *lst){
-    cel *atual, *aux, *com, *menor, *anterior=lst;
+/*void ordenacaoSelecao_ListaEncadeada(cel *lst){
+    cel *atual, *aux, *comp, *menor, *anterior=lst;
     for(atual=lst->prox;atual->prox!=NULL; atual=atual->prox){
-        if(comp->valor<menor->valor)
+        if(comp->valor<menor->valor){
             menor=comp;
+        }
         compAnt=compAnt->prox;
     }
     aux=atual->prox;
@@ -67,4 +68,4 @@ void ordenacaoSelecao_ListaEncadeada(cel *lst){
 
     atual=menor;
     }
-}
+}*/
