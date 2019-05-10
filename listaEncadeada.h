@@ -3,12 +3,6 @@ typedef struct celula{
     struct celula *prox;
 }cel;
 
-typedef struct node{
-        int valor;
-        struct node *esq;
-        struct node *dir;
-}no;
-
 typedef struct celulaDupla{
     struct celulaDupla *ant;
     int valor;
@@ -51,30 +45,4 @@ cel* vetorToListaCabeca(int v[], int n){
         insereNaLista_Cabeca(lst,celula);
     }
     return lst;
-}
-
-void insereArvore(no **r, int x){
-	no *aux=*r;
-	if(aux!= NULL){
-		if(x < aux->valor){
-			insereArvore(&aux->esq,x);
-		}else{
-			insereArvore(&aux->dir,x);
-		}
-	}else {
-	    aux=malloc(sizeof(no));
-        aux->valor=x;
-        aux->dir=NULL;
-        aux->esq=NULL;
-        *r=aux;
-	}
-}
-
-void imprimeArvore(no *r){
-	if(r != NULL){
-		imprimeArvore(r->esq);
-        printf("%d ", r->valor);
-        imprimeArvore(r->dir);
-	}
-
 }
