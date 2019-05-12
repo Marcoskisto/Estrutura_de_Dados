@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1556972625 source:c:\users\andre\documents\github\estrutura_de_dados\main.c
+1557676436 source:c:\users\andre\documents\github\estrutura_de_dados\main.c
 	<stdio.h>
 	<stdlib.h>
 	"vetores.h"
 	"listaEncadeada.h"
 	"ordenacao.h"
+	"arvore.h"
 
 1556972625 c:\users\andre\documents\github\estrutura_de_dados\vetores.h
 
-1556972625 c:\users\andre\documents\github\estrutura_de_dados\listaencadeada.h
+1557609563 c:\users\andre\documents\github\estrutura_de_dados\listaencadeada.h
 
-1556973771 c:\users\andre\documents\github\estrutura_de_dados\ordenacao.h
+1557676576 c:\users\andre\documents\github\estrutura_de_dados\ordenacao.h
 
 1557366315 source:c:\users\aluno\desktop\estrutura_de_dados\main.c
 	<stdio.h>
@@ -40,4 +41,6 @@
 1557447066 c:\users\aluno\desktop\estrutura_de_dados-master\ordenacao.h
 
 1557443255 c:\users\aluno\desktop\estrutura_de_dados-master\arvore.h
+
+1557609563 c:\users\andre\documents\github\estrutura_de_dados\arvore.h
 
