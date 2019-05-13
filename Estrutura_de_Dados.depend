@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557676436 source:c:\users\andre\documents\github\estrutura_de_dados\main.c
+1557716054 source:c:\users\andre\documents\github\estrutura_de_dados\main.c
 	<stdio.h>
 	<stdlib.h>
 	"vetores.h"
@@ -42,5 +42,5 @@
 
 1557443255 c:\users\aluno\desktop\estrutura_de_dados-master\arvore.h
 
-1557609563 c:\users\andre\documents\github\estrutura_de_dados\arvore.h
+1557747198 c:\users\andre\documents\github\estrutura_de_dados\arvore.h
 

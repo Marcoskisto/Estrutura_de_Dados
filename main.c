@@ -11,11 +11,18 @@ int main()
     int v[]={7,4,5,0};
     int v2[]={4,3,2,1,10,8,7,20,30,100,200,0};
     int v3[]={4,3,2,1,10,8,7,20,30,100,200,0};
-    cel *lst;
-    lst=vetorToListaCabeca(v2,12);
-    printListaSemCabeca(lst);
-    ordenacaoSelecao_ListaEncadeada(lst);
-    printf("\n\n");
-    printListaSemCabeca(lst);
+
+    no *r=NULL;
+    int i;
+    for(i=0;i<13;i++){
+        insereArvore(&r,v3[i]);
+
+    }
+
+    imprimeArvore(r);
+    printf("\n");
+    imprimeArvorePorNivel(r);
+
+
     return 0;
 }
