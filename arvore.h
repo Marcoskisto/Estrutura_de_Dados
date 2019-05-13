@@ -70,5 +70,14 @@ void imprimeArvorePorNivel(no *r){
         inicio=lst->prox;
     }
 }
-
+int alturaArvore(no *r) {
+   if (r == NULL)
+      return -1; // altura da árvore vazia
+   else {
+      int altEsq = alturaArvore(r->esq);
+      int altDir = alturaArvore(r->dir);
+      if (altEsq < altDir) return altDir + 1;
+      else return altEsq + 1;
+   }
+}
 #endif // ARVORE_H_INCLUDED
