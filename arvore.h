@@ -80,4 +80,35 @@ int alturaArvore(no *r) {
       else return altEsq + 1;
    }
 }
+
+no * buscaPai(no *r,int x){
+    if(r!=NULL){
+        if(r->valor==x) {
+            return r->pai
+        }else if(r->valor>x){
+            aux=retornaPai(r->esq,x);
+        }else{
+            aux=retornaPai(r->dir,x);
+        }
+        return aux;
+    }
+        return NULL;
+}
+
+
+int alturaArvore2(raiz *r){
+    int alturaEsq;
+    int alturaDir;
+    if(r==NULL){
+        return 0;
+    }else{
+        alturaEsq= 1+alturaArvore(r->esq);
+        alturaDir= 1+alturaArvore(r->dir);
+    }
+    if(alturaEsq>alturaDir){
+        return alturaEsq;
+    }else{
+        return alturaDir;
+    }
+}
 #endif // ARVORE_H_INCLUDED
