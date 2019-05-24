@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct no{
+    int valor;
+    struct no *esq;
+    struct no *dir;
+}No;
+
+void insertArvore(No **r, int i){
+    No *raiz=*r;
+    No *novo;
+    novo=malloc(sizeof(No));
+    novo->valor=i;
+    novo->esq=NULL;
+    novo->dir=NULL;
+    if(raiz==NULL){
+        *r=novo;
+    }else if(i<raiz->valor){
+        insertArvore(&raiz->esq,i);
+    }else{
+        insertArvore(&raiz->dir,i);
+    }
+}
+No* vetor2Arvore(int n, int v[]){
+    int i;
+    No *q=NULL;
+    for(i=0;i<n;i++)
+        insertArvore(&q,v[i]);
+    return q;
+}
+
+void printArvore(No *r){
+    if(r!=NULL){
+        printArvore(r->esq);
+        printf("%d",r->valor);
+        printArvore(r->dir);
+    }
+}
+
+int main()
+{
+    No *arvore=NULL;
+    int v[]={4,3,5,8,0,7,6,1,2};
+    insertArvore(&arvore,10);
+    arvore=vetor2Arvore(9,v);
+    printArvore(arvore);
+}
